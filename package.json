@@ -1,10 +1,11 @@
 {
-  "name": "simple-sushiswap-sdk",
+  "name": "@graviton/simple-sushiswap-sdk",
   "version": "1.0.2",
   "description": "Simple easy to understand SDK for sushiswap",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
+    "build": "tsc",
     "gen-erc20-abi": "abi-types-generator ./src/ABI/erc-20-abi.json --output=./src/ABI/types --name=erc20-contract --provider=ethers_v5",
     "gen-sushiswap-router-v2-abi": "abi-types-generator ./src/ABI/sushiswap-router-v2.json --output=./src/ABI/types --name=sushiswap-router --provider=ethers_v5",
     "gen-sushiswap-factory-v2-abi": "abi-types-generator ./src/ABI/sushiswap-factory-v2.json --output=./src/ABI/types --name=sushiswap-factory --provider=ethers_v5",
@@ -14,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshstevens19/simple-sushiswap-sdk.git"
+    "url": "git+https://github.com/GravitonINC/simple-sushiswap-sdk.git"
   },
   "author": "",
   "license": "ISC",
@@ -24,12 +25,12 @@
     "sushiswap"
   ],
   "bugs": {
-    "url": "https://github.com/joshstevens19/simple-sushiswap-sdk/issues"
+    "url": "https://github.com/GravitonINC/simple-sushiswap-sdk/issues"
   },
-  "homepage": "https://github.com/joshstevens19/simple-sushiswap-sdk#readme",
+  "homepage": "https://github.com/GravitonINC/simple-sushiswap-sdk#readme",
   "dependencies": {
     "bignumber.js": "^9.0.1",
-    "ethereum-multicall": "^2.0.1",
+    "ethereum-multicall": "^2.15.0",
     "ethers": "^5.0.26",
     "rxjs": "^6.6.3"
   },
