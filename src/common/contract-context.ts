@@ -1,23 +1,31 @@
 import { JsonFragment } from '@ethersproject/abi';
+import { ChainId } from '../enums/chain-id';
+import { FactoryAddress, PairAddress, RouterAddress } from './sushiswap';
 
 export class ContractContext {
   /**
+   * Update the context to a different chainId - default to MAINNET
+   */
+   public static setChainId(chainId: ChainId | number) {
+    this.routerAddress = RouterAddress.routerAddress(chainId);
+    this.factoryAddress = FactoryAddress.factoryAddress(chainId);
+    this.pairAddress = PairAddress.pairAddress(chainId);
+   }
+
+  /**
    * The sushiswap router address
    */
-  public static routerAddress = '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506';
-  // public static routerAddress = '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F';
+  public static routerAddress = RouterAddress.MAINNET();
 
   /**
    * The sushiswap factory address
    */
-  public static factoryAddress = '0xc35DADB65012eC5796536bD9864eD8773aBc74C4';
-  // public static factoryAddress = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac';
+  public static factoryAddress = FactoryAddress.MAINNET();
 
   /**
    * The sushiswap pair address
    */
-  public static pairAddress = '0xc35DADB65012eC5796536bD9864eD8773aBc74C4';
-  // public static pairAddress = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac';
+  public static pairAddress = PairAddress.MAINNET();
 
   /**
    * sushiswap v2 router

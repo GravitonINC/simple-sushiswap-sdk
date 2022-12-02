@@ -12,6 +12,7 @@ export {
 } from './factories/pair/models/sushiswap-pair-contexts';
 export { SushiswapPairSettings } from './factories/pair/models/sushiswap-pair-settings';
 export { TradeContext } from './factories/pair/models/trade-context';
+export { ContractContext } from './common/contract-context';
 export { Transaction } from './factories/pair/models/transaction';
 export { SushiswapPair } from './factories/pair/sushiswap-pair';
 export { SushiswapPairContractFactoryPublic } from './factories/pair/sushiswap-pair-contract.factory.public';
